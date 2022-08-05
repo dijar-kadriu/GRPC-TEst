@@ -8,7 +8,7 @@ namespace Server
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddApiVersioning();
-            services.AddControllers(/*o => { o.Filters.Add(new ConsumesAttribute(MediaTypeNames.Application.Json)); }*/);
+            services.AddControllers(o => { o.Filters.Add(new ConsumesAttribute(MediaTypeNames.Application.Json)); });
             services.AddGrpc();
         }
 
